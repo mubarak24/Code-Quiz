@@ -4,6 +4,13 @@
 
 .choices button {
     display: block;
+    background-color: rgb(74, 30, 112);
+    color: white;
+}
+
+.start button {
+    background-color: rgb(74, 30, 112);
+    color: white;
 }
 
 .choice {
