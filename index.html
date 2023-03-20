@@ -1,71 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
     <div class="scores"></div>
-    <div class="timer"></div>
+    <div id="time"></div>
     <div class="wrapper">
-    <div id="start-quiz" class="hide"></div>
         <h2>Coding Quiz Challenge</h2>
-        <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 15 seconds.</p>
-        <button>Start Quiz</button>
+        <div id="start-screen" class="start">
+            <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect
+                answers will penalize your score/time by 15 seconds.</p>
+            <button id="start-quiz">Start Quiz</button>
+        </div>
+        <div id="questions" class="hide">
+            <h3 id="question-title"></h3>
+            <div id="choices" class="choices"></div>
+        </div>
     </div>
-    <div id="questions">
-        <h2 id="question-title">Commonly used data types DO NOT include:</h2>
-        <div id="choices">
-            <button class="choice" value="strings">1. strings</button>
-            <button class="choice" value="booleans">1. booleans</button>
-            <button class="choice" value="alerts">1. alerts</button>
-            <button class="choice" value="numbers">1. numbers</button>
-        </div>
-        <h2 id="question-title">The condition of an if/else statement is enclosed within _.</h2>
-        <div id="choices">
-            <button class="choice" value="quotes">1. quotes</button>
-            <button class="choice" value="curly brackets">1. curly brackets</button>
-            <button class="choice" value="parentheses">1. parentheses</button>
-            <button class="choice" value="square brackets">1. square brackets</button>
-        </div>
-        <h2 id="question-title">Arrays in Javascript can be used to store _.</h2>
-        <div id="choices">
-            <button class="choice" value="numbers and strings">1. numbers and strings</button>
-            <button class="choice" value="other arrays">1. other arrays</button>
-            <button class="choice" value="booleans">1. booleans</button>
-            <button class="choice" value="all of the above">1. all of the above</button>
-        </div>
-        <h2 id="question-title">String values must be enclosed within _ when being assigned to variables.</h2>
-        <div id="choices">
-            <button class="choice" value="commas">1. commas</button>
-            <button class="choice" value="curly brackets">1. curly brackets</button>
-            <button class="choice" value="quotes">1. quotes</button>
-            <button class="choice" value="parentheses">1. parentheses</button>
-        </div>
-        <h2 id="question-title">A very useful tool used during development and debugging for printing content to the debugger is:</h2>
-        <div id="choices">
-            <button class="choice" value="javascript">1. javascript</button>
-            <button class="choice" value="terminal/bash">1. terminal/bash</button>
-            <button class="choice" value="for loops">1. for loops</button>
-            <button class="choice" value="console log">1. console log</button>
-        </div>
 
+    <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is</p>
+        <label>Enter initials</label>
+        <input type="text">
+        <input type="submit">
+        <h2>Highscores</h2>
+        <button>Go Back</button>
+        <button>Clear Highscores</button>
     </div>
-    <div id="end-screen" class="hide"></div>
-    <h2>All done!</h2>
-    <p>Your final score is</p>
-    <label>Enter initials</label>
-    <input type="text">
-    <input type="submit"> 
+
     <div id="feedback" class="feedback"></div>
-    <h2>Highscores</h2>
-    <button>Go Back</button>
-    <button>Clear Highscores</button>
-
-    <script src="assets\script.js"></script>
+    
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>
