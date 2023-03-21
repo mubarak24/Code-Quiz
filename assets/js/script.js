@@ -87,5 +87,14 @@ var finalScoreEl = document.getElementById("final-score");
 finalScoreEl.textContent = time;
 
   questionsEl.setAttribute("class", "hide");
+  localStorage.setItem("initials", time);
 }
 
+var highscoreBtn = document.getElementById("highscore-btn");
+highscoreBtn.addEventListener('click', function() {
+  initialsInput = document.getElementById("initials-input").value;
+  console.log("initialsInput");
+  console.log(initialsInput);
+  localStorage.setItem(initialsInput, time);
+}
+);
